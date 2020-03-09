@@ -1,0 +1,10 @@
+.side {
+    margin : 10px 10px 10px 10px !important;
+    border : 'solid'!important;
+    background-color: red !important;
+}
+.board {
+    padding : 10px 10px 10px 10px !important;
+    margin : 10px 10px 10px 10px !important;
+    color : red !important;
+}

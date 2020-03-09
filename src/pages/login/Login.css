@@ -1,0 +1,18 @@
+article{
+    width : 40%;
+}
+
+Button{
+    width : 100%
+}
+.rowSpace {
+    height: 25px;
+}
+.loginForm {
+    display : inline-block;
+    width : 85%;
+}
+.loginContainer {
+    text-align : center;
+    width : 100%;
+}
