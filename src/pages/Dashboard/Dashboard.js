@@ -84,17 +84,16 @@ class Dashboard extends Component {
                                 <Route path="/dashboard/accountsetting" component = {accountsetting}/>
                                 <Route path="/dashboard/contactus" component = {contactus}/>
                             </Switch>
-
                         </Content>
                     </Layout>
                     </Content>
-                    <Footer style={{ textAlign: 'center' }}>Design ©2020 Created by WangXiao</Footer>
+                    <div className = "footer"> 
+                        <Footer style = {{textAlign : "center"}}> Design ©2020 Created by WangXiaoJin </Footer>
+                    </div>
                 </Layout>
             </div>
         )
     }
 }
-
-
 
 export default Dashboard;

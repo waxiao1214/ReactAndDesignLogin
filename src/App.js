@@ -10,9 +10,9 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Login from './pages/login/Login';
 import Signup from './pages/login/Signup';
 import * as actions from './store/actions/auth';
+import PrivateRouter from './router/privateRouter'
 
 export default class App extends Component {
-
  render() {
   return (
     <Router>
@@ -23,9 +23,9 @@ export default class App extends Component {
           <Route path="/signup">
           <Signup/>
           </Route>
-          <Route path="/dashboard">
+          <PrivateRouter path="/dashboard/home">
           <Dashboard/>
-          </Route>
+          </PrivateRouter>
         </Switch>
     </Router>
   )

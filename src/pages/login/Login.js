@@ -8,14 +8,22 @@ import { connect } from 'react-redux';
 class NormalLoginForm extends React.Component {
   
   state = {
-      redirect : false
+    redirect : false
   }
 
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        err.preventDefault();
+        //err.preventDefault();
+        if(values.username == "test" && values.password == "test"){
+          debugger
+          this.setState({
+            redirect : true
+          })
+          localStorage.setItem('token', "loggedin") 
+        }
+
         fetch('http://localhost:8000/token-auth/', {
           method: 'POST',
           headers: {
@@ -44,7 +52,7 @@ class NormalLoginForm extends React.Component {
     const { getFieldDecorator } = this.props.form;
     const { redirect } = this.state;
     if ( redirect ) {
-        return <Redirect to='/dashboard/home'/>
+        return <Redirect to='/dashboard'/>
     }
 
     return (
