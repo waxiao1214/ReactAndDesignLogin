@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Dashboard';
+import './Dashboard.css';
 import  logoImg  from '../img/logo.png';
 import { Link, Route, Switch } from 'react-router-dom';
 import home from './partial/home';
@@ -20,13 +20,13 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div>
+            <div  style = {{width : "100%", height : "100vh", backgroundColor : "white"}}>
                 <Layout>
                 {/* #009df8 */}
                     <Header style={{ background: '#009df8' }} className="header">
                     <div className="row">
                         <div className="col-sm-6"> 
-                            <img src={ logoImg } style ={{with:'auto', height:'20px'}} alt='image'/>
+                            <img src={ logoImg } style ={{with:'auto', height:'50%'}} alt='image'/>
                         </div>
                         <div className="col-sm-5"></div>
                         <div className="col-sm-1">
@@ -87,7 +87,7 @@ class Dashboard extends Component {
                         </Content>
                     </Layout>
                     </Content>
-                    <div className = "footer"> 
+                    <div className = "footer">
                         <Footer style = {{textAlign : "center"}}> Design ©2020 Created by WangXiaoJin </Footer>
                     </div>
                 </Layout>

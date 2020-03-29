@@ -23,7 +23,7 @@ export default class App extends Component {
           <Route path="/signup">
           <Signup/>
           </Route>
-          <PrivateRouter path="/dashboard/home">
+          <PrivateRouter path="/dashboard">
           <Dashboard/>
           </PrivateRouter>
         </Switch>
